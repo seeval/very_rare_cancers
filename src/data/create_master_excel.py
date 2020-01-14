@@ -26,8 +26,12 @@ def out (o):
 
 # create reference lists
 # icd032
-icd032 = pd.read_excel(pass,sheet_name='pass')
-icd032['hist'] = str_4(icd032['ICD03.2'])
+
+icd032 = pd.read_excel("../data/raw/link/ICD-O-3.2.xls",sheet_name='ICD-O-3.2 Morphology')
+icd032['hist'] = str_4(icd032['ICDO3.2'])
+
+preflist = pd.read_excel("../data/raw/link/Preferred Sites.xlsx")
+
 
 #c15['hist4'] = c15['Histology'].str[:4]
 
